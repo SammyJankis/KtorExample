@@ -1,6 +1,6 @@
 package com.example.model
 
-import org.jetbrains.exposed.dao.id.IntIdTable
+import org.jetbrains.exposed.dao.IntIdTable
 
 object Silos : IntIdTable() {
     val name = varchar("name", 128)
