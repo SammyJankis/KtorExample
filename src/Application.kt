@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.routes.mainRouter
 import com.example.routes.silos
 import com.example.service.DatabaseFactory
 import com.example.service.SilosService
@@ -31,8 +32,8 @@ fun Application.module() {
     DatabaseFactory.init()
 
     val silosService = SilosService()
-
     install(Routing) {
+        mainRouter()
         silos(silosService)
     }
 }
